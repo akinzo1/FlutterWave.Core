@@ -5,8 +5,11 @@ VisualStudioVersion = 17.7.33906.173
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FlutterWave.Core", "FlutterWave.Core.csproj", "{03F31E6C-1371-4450-A9A2-1C472D239F08}"
 EndProject
+<<<<<<< HEAD
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FlutterWave.Core.Tests.Unit", "..\FlutterWave.Core.Tests.Unit\FlutterWave.Core.Tests.Unit.csproj", "{7EACE48B-453E-428E-96EB-AF6B3DA8315A}"
 EndProject
+=======
+>>>>>>> 8001c80bb1b9d5f15c2a6336bd32f01a70a267f7
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -17,10 +20,13 @@ Global
 		{03F31E6C-1371-4450-A9A2-1C472D239F08}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{03F31E6C-1371-4450-A9A2-1C472D239F08}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{03F31E6C-1371-4450-A9A2-1C472D239F08}.Release|Any CPU.Build.0 = Release|Any CPU
+<<<<<<< HEAD
 		{7EACE48B-453E-428E-96EB-AF6B3DA8315A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{7EACE48B-453E-428E-96EB-AF6B3DA8315A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7EACE48B-453E-428E-96EB-AF6B3DA8315A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7EACE48B-453E-428E-96EB-AF6B3DA8315A}.Release|Any CPU.Build.0 = Release|Any CPU
+=======
+>>>>>>> 8001c80bb1b9d5f15c2a6336bd32f01a70a267f7
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
