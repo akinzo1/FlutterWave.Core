@@ -1,0 +1,44 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>net7.0</TargetFramework>
+		<ImplicitUsings>disable</ImplicitUsings>
+		<Nullable>disable</Nullable>
+		<Title>FlutterWave.Core</Title>
+		<Company>Panda-tut Enterprises Limited</Company>
+		<Authors>Ahmad Salim</Authors>
+		<Description>A Standardized .NET library for FlutterWave integration</Description>
+		<Copyright>Panda-tut Enterprises Limited 2023 (c)</Copyright>
+		<PackageLicenseFile>license.txt</PackageLicenseFile>
+		<PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
+		<RepositoryType>git</RepositoryType>
+		<PackageTags>Flutterwave, .NET, The Standard, FlutterWave.Core</PackageTags>
+		<GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="7.0.0" />
+		<PackageReference Include="RESTFulSense" Version="2.15.0" />
+		<InternalsVisibleTo Include="FlutterWave.Core.Tests.Unit" />
+		<InternalsVisibleTo Include="FlutterWave.Core.Tests.Acceptance" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<Folder Include="Models\Services\Foundations\ExternalFlutterWave\ExternalRemita\" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<InternalsVisibleTo Include="FlutterWave.Core.Tests.Unit" />
+		<InternalsVisibleTo Include="DynamicProxyGenAssembly2" />
+		<InternalsVisibleTo Include="FlutterWave.Core.Tests.Acceptance" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<None Update="license.txt">
+			<Pack>True</Pack>
+			<PackagePath>\</PackagePath>
+		</None>
+	</ItemGroup>
+
+
+</Project>
