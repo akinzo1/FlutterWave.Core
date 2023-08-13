@@ -4,7 +4,7 @@ namespace FlutterWave.Core.Tests.Integration.API.Preauthorization
 {
     public partial class PreauthorizationApiTests
     {
-        [Fact]
+        [Fact(Skip = "This test is only for releases")]
         public async Task ShouldPostVoidPayPalChargeAsync()
         {
 
