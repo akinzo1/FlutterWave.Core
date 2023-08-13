@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FlutterWave.Core", "Flutter
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FlutterWave.Core.Tests.Unit", "..\FlutterWave.Core.Tests.Unit\FlutterWave.Core.Tests.Unit.csproj", "{7EACE48B-453E-428E-96EB-AF6B3DA8315A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FlutterWave.Core.Tests.Acceptance", "..\FlutterWave.Core.Tests.Acceptance\FlutterWave.Core.Tests.Acceptance.csproj", "{C6FC434D-4A36-4962-9021-488DD4DACA86}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{7EACE48B-453E-428E-96EB-AF6B3DA8315A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7EACE48B-453E-428E-96EB-AF6B3DA8315A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7EACE48B-453E-428E-96EB-AF6B3DA8315A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C6FC434D-4A36-4962-9021-488DD4DACA86}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C6FC434D-4A36-4962-9021-488DD4DACA86}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C6FC434D-4A36-4962-9021-488DD4DACA86}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C6FC434D-4A36-4962-9021-488DD4DACA86}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
