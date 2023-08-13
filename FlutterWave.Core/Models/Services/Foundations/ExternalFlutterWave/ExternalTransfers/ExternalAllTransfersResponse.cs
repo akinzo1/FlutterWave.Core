@@ -69,7 +69,7 @@ namespace FlutterWave.Core.Models.Services.Foundations.ExternalFlutterWave.Exter
             public int Amount { get; set; }
 
             [JsonProperty("fee")]
-            public int Fee { get; set; }
+            public double Fee { get; set; }
 
             [JsonProperty("status")]
             public string Status { get; set; }

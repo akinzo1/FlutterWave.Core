@@ -4,7 +4,7 @@ namespace FlutterWave.Core.Tests.Integration.API.Banks
 {
     public partial class BanksApiTests
     {
-        [Fact]
+        [Fact(Skip = "This test is only for releases")]
         public async Task ShouldRetrieveAllBanksByCountryAsync()
         {
 
