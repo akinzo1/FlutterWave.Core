@@ -3,11 +3,11 @@
 ![FlutterWave.Core](https://raw.githubusercontent.com/SlimAhmad/FlutterWave.Core/main/FlutterWave.Core/flutterwave.jpg)
 
 
-[![.NET](https://github.com/hassanhabib/OpenAI.NET/actions/workflows/dotnet.yml/badge.svg)](https://github.com/hassanhabib/OpenAI.NET/actions/workflows/dotnet.yml)
-[![Nuget](https://img.shields.io/nuget/v/Standard.AI.OpenAI?logo=nuget)](https://www.nuget.org/packages/Standard.AI.OpenAI)
-![Nuget](https://img.shields.io/nuget/dt/Standard.AI.OpenAI?color=blue&label=Downloads)
+[![.NET](https://github.com/hassanhabib/OpenAI.NET/actions/workflows/dotnet.yml/badge.svg)](https://github.com/SlimAhmad/FlutterWave.Core/actions/workflows/dotnet.yml)
+[![Nuget](https://img.shields.io/nuget/v/FlutterWave.Core?logo=nuget)](https://www.nuget.org/packages/FlutterWave.Core)
+![Nuget](https://img.shields.io/nuget/dt/FlutterWave.Core?color=blue&label=Downloads)
 [![The Standard - COMPLIANT](https://img.shields.io/badge/The_Standard-COMPLIANT-2ea44f)](https://github.com/hassanhabib/The-Standard)
-[![The Standard Community](https://img.shields.io/discord/934130100008538142?color=%237289da&label=The%20Standard%20Community&logo=Discord)](https://discord.gg/vdPZ7hS52X)
+
 
 ## Introduction
 FlutterWave.Core is a Standard-Compliant .NET library built on top of FlutterWave API RESTful endpoints to enable software engineers to develop FinTech solutions in .NET.
