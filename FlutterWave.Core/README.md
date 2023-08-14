@@ -1,6 +1,6 @@
-# Standard.AI.OpenAI
+# FlutterWave.Core
 
-![Standard.AI.OpenAI](https://raw.githubusercontent.com/hassanhabib/Standard.AI.OpenAI/main/Standard.AI.OpenAI/standard-ai-openai-cover-big.png)
+![FlutterWave.Core](https://raw.githubusercontent.com/SlimAhmad/FlutterWave.Core/main/FlutterWave.Core/flutterwavelogo.jpg)
 
 
 [![.NET](https://github.com/hassanhabib/OpenAI.NET/actions/workflows/dotnet.yml/badge.svg)](https://github.com/hassanhabib/OpenAI.NET/actions/workflows/dotnet.yml)
@@ -10,7 +10,28 @@
 [![The Standard Community](https://img.shields.io/discord/934130100008538142?color=%237289da&label=The%20Standard%20Community&logo=Discord)](https://discord.gg/vdPZ7hS52X)
 
 ## Introduction
-Standard.AI.OpenAI is a Standard-Compliant .NET library built on top of OpenAI API RESTful endpoints to enable software engineers to develop AI-Powered solutions in .NET.
+FlutterWave.Core is a Standard-Compliant .NET library built on top of FlutterWave API RESTful endpoints to enable software engineers to develop FinTech solutions in .NET.
+
+## This library implements the following section
+Please review the following documents:
+- [Charge](https://developer.flutterwave.com/reference/endpoints/charge)
+- [Validate Charge](https://developer.flutterwave.com/reference/endpoints/validate-charge)
+- [Tokenization](https://developer.flutterwave.com/reference/endpoints/tokenized-charge)
+- [Preauthorization](https://developer.flutterwave.com/reference/endpoints/preauthorization)
+- [Transactions](https://developer.flutterwave.com/reference/endpoints/transactions)
+- [Transfers](https://developer.flutterwave.com/reference/endpoints/transfers)
+- [Virtual Cards](https://developer.flutterwave.com/reference/endpoints/virtual-cards)
+- [Virtual Accounts](https://developer.flutterwave.com/reference/endpoints/virtual-account-numbers)
+- [Collection Subaccounts](https://developer.flutterwave.com/reference/endpoints/collection-subaccount)
+- [Payout Subaacounts](https://developer.flutterwave.com/reference/endpoints/payout-subaccounts)
+- [Subscriptions](https://developer.flutterwave.com/reference/endpoints/subscriptions)
+- [Payment Plans](https://developer.flutterwave.com/reference/endpoints/payment-plans)
+- [Bill Payments](https://developer.flutterwave.com/reference/endpoints/bills)
+- [Banks](https://developer.flutterwave.com/reference/endpoints/banks)
+- [Settlements](https://developer.flutterwave.com/reference/endpoints/settlements)
+- [OTP](https://developer.flutterwave.com/reference/endpoints/otp)
+- [Charge Backs](https://developer.flutterwave.com/reference/endpoints/charge-backs)
+- [Misc](https://developer.flutterwave.com/reference/endpoints/misc)
 
 ## Standard-Compliance
 This library was built according to The Standard. The library follows engineering principles, patterns and tooling as recommended by The Standard.
@@ -18,205 +39,227 @@ This library was built according to The Standard. The library follows engineerin
 This library is also a community effort which involved many nights of pair-programming, test-driven development and in-depth exploration research and design discussions.
 
 ## How to use this library?
-In order to use this library there are prerequists that you must complete before you can write your first AI-Powered C#.NET program. These steps are as follows:
+In order to use this library there are prerequisites that you must complete before you can write your first C#.NET program. These steps are as follows:
 
-### OpenAI Account
-You must create an OpenAI account with the following link:
-[Click here](https://platform.openai.com/signup)
+### FlutterWave Account
+You must create an flutterWave account with the following link:
+[Click here](https://dashboard.flutterwave.com/login)
 
 ### Nuget Package 
-Install the Standard.AI.OpenAI library in your project.
+Install the FlutterWave.Core library in your project.
 Use the method best suited for your development preference listed at the Nuget Link above or below.
 
 [![Nuget](https://img.shields.io/nuget/v/Standard.AI.OpenAI?logo=nuget)](https://www.nuget.org/packages/Standard.AI.OpenAI)
 
 ### API Keys
-Once you've created an OpenAI account. Now, go ahead and generate an API key from the following link:
-[Click here](https://platform.openai.com/account/api-keys)
+Once you've created a FlutterWave account. Now, go ahead and get an API key from the following link:
+[Click here](https://app.flutterwave.com/dashboard/settings/apis/live)
 
 ### Hello, World!
 Once you've completed the aforementioned steps, let's write our very first program with Standard.AI.OpenAI as follows:
 
 ### Completions
-The following example demonstrate how you can write your first Completions program.
+The following example demonstrate how you can write your first direct card charge program.
+
+PCI Compliance is required for direct charge.
+[Check documentation](https://developer.flutterwave.com/docs/direct-charge/card/)
 
 #### Program.cs
 ```csharp
 using System;
 using System.Threading.Tasks;
-using Standard.AI.OpenAI.Clients.OpenAIs;
-using Standard.AI.OpenAI.Models.Configurations;
-using Standard.AI.OpenAI.Models.Services.Foundations.Completions;
+using FlutterWave.Core;
+using FlutterWave.Core.Models.Services.Foundations.FlutterWave.Charge;
 
-namespace ExampleOpenAIDotNet
+namespace ExampleFlutterWaveNet
 {
     internal class Program
     {
         static async Task Main(string[] args)
         {
-            var openAIConfigurations = new OpenAIConfigurations
+
+            var apiConfigurations = new ApiConfigurations
             {
-                ApiKey = "YOUR_API_KEY_HERE",
-                OrganizationId = "YOUR_OPTIONAL_ORG_ID_HERE"
+                
+                ApiKey = Environment.GetEnvironmentVariable("ApiKey"),
+
             };
 
-            var openAIClient = new OpenAIClient(openAIConfigurations);
+            this.flutterWaveClient = new FlutterWaveClient(apiConfigurations);
 
-            var inputCompletion = new Completion
+            // given
+            var request = new CardCharge
             {
-                Request = new CompletionRequest
+                Request = new CardChargeRequest
                 {
-                    Prompts = new string[] { "Human: Hello!" },
-
-                    Model = "text-davinci-003"
-                }
-            };
-
-            Completion resultCompletion =
-                await openAIClient.Completions.PromptCompletionAsync(
-                    inputCompletion);
-
-            Array.ForEach(
-                resultCompletion.Response.Choices, 
-                choice => Console.WriteLine(choice.Text));
-        }
-    }
-}
-```
-
-### Chat Completions
-The following example demonstrate how you can write your first Chat Completions program.
-
-#### Program.cs
-```csharp
-using System;
-using System.Threading.Tasks;
-using Standard.AI.OpenAI.Clients.OpenAIs;
-using Standard.AI.OpenAI.Models.Configurations;
-using Standard.AI.OpenAI.Models.Services.Foundations.ChatCompletions;
-
-namespace ExampleOpenAIDotNet
-{
-    internal class Program
-    {
-        static async Task Main(string[] args)
-        {
-            var openAIConfigurations = new OpenAIConfigurations
-            {
-                ApiKey = "YOUR_API_KEY_HERE",
-                OrganizationId = "YOUR_OPTIONAL_ORG_ID_HERE"
-            };
-
-            var openAIClient = new OpenAIClient(openAIConfigurations);
-
-            var chatCompletion = new ChatCompletion
-            {
-                Request = new ChatCompletionRequest
-                {
-                    Model = "gpt-3.5-turbo",
-                    Messages = new ChatCompletionMessage[]
+                    CardNumber = "5531886652142950",
+                    Cvv = "564",
+                    ExpiryMonth = 09,
+                    ExpiryYear = 32,
+                    Currency = "NGN",
+                    Amount = 100,
+                    FullName = "Yolande Aglaé Colbert",
+                    Email = "user@example.com",
+                    TxRef = "MC-3243e",
+                    RedirectUrl = "https://www,flutterwave.ng",
+                    Authorization = new CardChargeRequest.AuthorizationData
                     {
-                        new ChatCompletionMessage
-                        {
-                            Content = "What is c#?",
-                            Role = "user",
-                        }
+                        Address = "3563 Huntertown Rd, Allison park, PA",
+                        Pin = 3310,
+                        City = "San Francisco",
+                        Country = "US",
+                        State = "California",
+                        Mode = "pin",
+                        ZipCode = "94105"
+
                     },
+                    Preauthorize = true,
+                    Meta = new CardChargeRequest.CardMeta
+                    {
+                        FlightId = "",
+                        SideNote = ""
+                    },
+                    PaymentPlan = "",
+                    DeviceFingerprint = "",
+                    ClientIp = "127.0.0.1"
+
                 }
             };
 
-            ChatCompletion resultChatCompletion =
-                await openAIClient.ChatCompletions.SendChatCompletionAsync(
-                    chatCompletion);
+           
 
-            Array.ForEach(
-                resultChatCompletion.Response.Choices,
-                choice => Console.WriteLine(
-                    value: $"{choice.Message.Role}: {choice.Message.Content}"));
+            // . when
+            CardCharge responseFlutterWaveModels =
+                await this.flutterWaveClient.Charge.ChargeCardAsync(
+                request, Environment.GetEnvironmentVariable("EncryptionKey"));
+
+          
         }
     }
 }
 ```
 
-### Fine-Tunes
-The following example demonstrate how you can write your first Fine-tunes program.
+### ACH Charge
+The following implementation shows how to accept payments directly from customers in the US and South Africa. 
 
 #### Program.cs
 ```csharp
 using System;
-using System.IO;
-using System.Text;
 using System.Threading.Tasks;
-using Standard.AI.OpenAI.Clients.OpenAIs;
-using Standard.AI.OpenAI.Models.Configurations;
-using Standard.AI.OpenAI.Models.Services.Foundations.AIFiles;
-using Standard.AI.OpenAI.Models.Services.Foundations.FineTunes;
+using FlutterWave.Core;
+using FlutterWave.Core.Models.Services.Foundations.FlutterWave.Charge;
 
-namespace Examples.Standard.AI.OpenAI.Clients.FineTunes
+namespace ExampleFlutterWaveNet
 {
     internal class Program
     {
         static async Task Main(string[] args)
         {
-            var openAIConfigurations = new OpenAIConfigurations
+
+            var apiConfigurations = new ApiConfigurations
             {
-                ApiKey = "YOUR_API_KEY_HERE",
-                ApiUrl = "https://api.openai.com"
+                
+                ApiKey = Environment.GetEnvironmentVariable("ApiKey"),
+
             };
 
-            IOpenAIClient openAIClient =
-                new OpenAIClient(openAIConfigurations);
+            this.flutterWaveClient = new FlutterWaveClient(apiConfigurations);
 
-            MemoryStream memoryStream = CreateRandomStream();
-
-            var aiFile = new AIFile
+           // given
+            var request = new ACHPayments
             {
-                Request = new AIFileRequest
+                Request = new ACHPaymentsRequest
                 {
-                    Name = "Test",
-                    Content = memoryStream,
-                    Purpose = "fine-tune"
+                    TxRef = "MC-1585230ew9v5050e8",
+                    Amount = 100,
+                    Currency = "USD",
+                    Country = "US",
+                    Email = "user@example.com",
+                    PhoneNumber = "0902620185",
+                    FullName = "Yolande Aglaé Colbert",
+                    ClientIp = "154.123.220.1",
+                    RedirectUrl = "https://www.flutterwave.com/us/",
+                    DeviceFingerprint = "62wd23423rq324323qew1",
+
+                    Meta = new ACHPaymentsRequest.ACHPaymentsMeta
+                    {
+                        FlightID = "123949494DC",
+                    },
+
+
                 }
             };
 
-            AIFile file = await openAIClient.AIFiles
-                .UploadFileAsync(aiFile);
-
-            var fineTune = new FineTune();
-            fineTune.Request = new FineTuneRequest();
-
-            fineTune.Request.FileId =
-                file.Response.Id;
-
-            FineTune fineTuneResult =
-                await openAIClient.FineTuneClient
-                    .SubmitFineTuneAsync(fineTune);
-
-            Console.WriteLine(fineTuneResult);
-        }
-
-        private static MemoryStream CreateRandomStream()
-        {
-            string content = "{\"prompt\": \"<prompt text>\", \"completion\": \"<ideal generated text>\"}";
-
-            return new MemoryStream(Encoding.UTF8.GetBytes(content));
+            // . when
+            ACHPayments responseFlutterWaveModels =
+                await this.flutterWaveClient.Charge.ChargeACHPaymentsAsync(request);
         }
     }
 }
 ```
+
+### NGBank Account Charge
+The following implementation shows how to initiate a direct bank charge.
+#### Program.cs
+```csharp
+using System;
+using System.Threading.Tasks;
+using FlutterWave.Core;
+using FlutterWave.Core.Models.Services.Foundations.FlutterWave.Charge;
+
+namespace ExampleFlutterWaveNet
+{
+    internal class Program
+    {
+        static async Task Main(string[] args)
+        {
+
+            var apiConfigurations = new ApiConfigurations
+            {
+                
+                ApiKey = Environment.GetEnvironmentVariable("ApiKey"),
+
+            };
+
+            this.flutterWaveClient = new FlutterWaveClient(apiConfigurations);
+
+            // given
+            var request = new NGBankAccounts
+            {
+                Request = new NGBankAccountsRequest
+                {
+                    TxRef = "MC-1585230ew9v5050e8",
+                    Amount = 100,
+                    AccountBank = "044",
+                    AccountNumber = "0690000032",
+                    Currency = "NGN",
+                    Email = "user@example.com",
+                    PhoneNumber = "0902620185",
+                    FullName = "Yolande Aglaé Colbert"
+                }
+            };
+
+            // . when
+            NGBankAccounts responseFlutterWaveModels =
+                await this.flutterWaveClient.Charge.ChargeNGBankAccountAsync(request);
+        }
+    }
+}
+```
+
 
 #### Exceptions
 
-Standard.AI.OpenAI may throw following exceptions:
+FlutterWave.Core may throw following exceptions:
 
 | Exception Name | When it will be thrown |
 | --- | --- |
-| `ChatCompletionClientValidationException` | This exception is thrown when a validation error occurs while using the chat completion client. For example, if required data is missing or invalid. |
-| `ChatCompletionClientDependencyException` | This exception is thrown when a dependency error occurs while using the chat completion client. For example, if a required dependency is unavailable or incompatible. |
-| `ChatCompletionClientServiceException` | This exception is thrown when a service error occurs while using the chat completion client. For example, if there is a problem with the server or any other service failure. |
-| `FineTuneClientValidationException` | This exception is thrown when a validation error occurs while using the fine-tunes client. For example, if required data is missing or invalid. |
-| `FineTuneClientDependencyException` | This exception is thrown when a dependency error occurs while using the fine-tunes client. For example, if a required dependency is unavailable or incompatible. |
-| `FineTuneClientDependencyException` | This exception is thrown when a service error occurs while using the fine-tunes client. For example, if there is a problem with the server or any other service failure. |
+| `BankClientValidationException` | This exception is thrown when a validation error occurs while using the chat completion client. For example, if required data is missing or invalid. |
+| `BankClientDependencyException` | This exception is thrown when a dependency error occurs while using the chat completion client. For example, if a required dependency is unavailable or incompatible. |
+| `BankClientServiceException` | This exception is thrown when a service error occurs while using the chat completion client. For example, if there is a problem with the server or any other service failure. |
+| `BillPaymentsClientValidationException` | This exception is thrown when a validation error occurs while using the fine-tunes client. For example, if required data is missing or invalid. |
+| `BillPaymentsClientDependencyException` | This exception is thrown when a dependency error occurs while using the fine-tunes client. For example, if a required dependency is unavailable or incompatible. |
+| `BIllPaymentsClientDependencyException` | This exception is thrown when a service error occurs while using the fine-tunes client. For example, if there is a problem with the server or any other service failure. |
 
 
 ## How to Contribute
@@ -225,24 +268,5 @@ If you want to contribute to this project please review the following documents:
 - [C# Coding Standard](https://github.com/hassanhabib/CSharpCodingStandard)
 - [The Team Standard](https://github.com/hassanhabib/The-Standard-Team)
 
-If you have a question make sure you either open an issue or join our [The Standard Community](https://discord.com/invite/vdPZ7hS52X) discord server.
+If you have a question make sure you either open an issue or join our [Ahmad Salim](slimahmad6@gmail.com) discord server.
 
-## Live-Sessions
-Our live-sessions are scheduled on [The Standard Calendar](https://tinyurl.com/the-standard-calendar) make sure you adjust the time to your city/timezone to be able to join us.
-
-We broadcast on multiple platforms:
-
-[YouTube](https://www.youtube.com/@HassanHabib)
-
-[LinkedIn](https://www.linkedin.com/in/hassanrezkhabib/)
-
-[Twitch](https://www.twitch.tv/binhabib)
-
-[Twitter](https://twitter.com/HassanRezkHabib)
-
-[Facebook](https://www.facebook.com/hassan.rezk.habib)
-
-### Past-Sessions
-Here's our live sessions to show you how this library was developed from scratch:
-
-[Standard.AI.OpenAI YouTube Playlist](https://www.youtube.com/watch?v=JQnTpGV-7YA&list=PLan3SCnsISTTl_MnGP6B78Nfu9Ix8G4mU)
