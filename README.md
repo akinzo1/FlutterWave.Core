@@ -1,6 +1,6 @@
 # FlutterWave.Core
 
-![FlutterWave.Core](https://raw.githubusercontent.com/SlimAhmad/FlutterWave.Core/main/FlutterWave.Core/flutterwavelogo.jpg)
+![FlutterWave.Core](https://raw.githubusercontent.com/SlimAhmad/FlutterWave.Core/main/FlutterWave.Core/flutterwave.jpg)
 
 
 [![.NET](https://github.com/hassanhabib/OpenAI.NET/actions/workflows/dotnet.yml/badge.svg)](https://github.com/hassanhabib/OpenAI.NET/actions/workflows/dotnet.yml)
