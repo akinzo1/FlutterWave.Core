@@ -18,9 +18,9 @@
 		<PackageIcon>flutterwave.jpg</PackageIcon>
 		<RepositoryUrl>https://github.com/SlimAhmad/FlutterWave.Core</RepositoryUrl>
 		<PackageReadmeFile>README.md</PackageReadmeFile>
-		<FileVersion>1.0.1</FileVersion>
-		<AssemblyVersion>1.0.1</AssemblyVersion>
-		<Version>1.0.1</Version>
+		<FileVersion>1.0.2</FileVersion>
+		<AssemblyVersion>1.0.2</AssemblyVersion>
+		<Version>1.0.2</Version>
 	</PropertyGroup>
 
 	<ItemGroup>
