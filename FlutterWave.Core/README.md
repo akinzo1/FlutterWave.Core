@@ -3,7 +3,7 @@
 ![FlutterWave.Core](https://raw.githubusercontent.com/SlimAhmad/FlutterWave.Core/main/FlutterWave.Core/flutterwave.jpg)
 
 
-[![.NET](https://github.com/hassanhabib/OpenAI.NET/actions/workflows/dotnet.yml/badge.svg)](https://github.com/SlimAhmad/FlutterWave.Core/actions/workflows/dotnet.yml)
+[![.NET](https://github.com/SlimAhmad/FlutterWave.Core/actions/workflows/dotnet.yml/badge.svg)](https://github.com/SlimAhmad/FlutterWave.Core/actions/workflows/dotnet.yml)
 [![Nuget](https://img.shields.io/nuget/v/FlutterWave.Core?logo=nuget)](https://www.nuget.org/packages/FlutterWave.Core)
 ![Nuget](https://img.shields.io/nuget/dt/FlutterWave.Core?color=blue&label=Downloads)
 [![The Standard - COMPLIANT](https://img.shields.io/badge/The_Standard-COMPLIANT-2ea44f)](https://github.com/hassanhabib/The-Standard)
