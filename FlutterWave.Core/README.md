@@ -257,9 +257,9 @@ FlutterWave.Core may throw following exceptions:
 | `BankClientValidationException` | This exception is thrown when a validation error occurs while using the bank client. For example, if required data is missing or invalid. |
 | `BankClientDependencyException` | This exception is thrown when a dependency error occurs while using the bank client. For example, if a required dependency is unavailable or incompatible. |
 | `BankClientServiceException` | This exception is thrown when a service error occurs while using the bank client. For example, if there is a problem with the server or any other service failure. |
-| `BillPaymentsClientValidationException` | This exception is thrown when a validation error occurs while using the bill payments client. For example, if required data is missing or invalid. |
-| `BillPaymentsClientDependencyException` | This exception is thrown when a dependency error occurs while using the bill payments client. For example, if a required dependency is unavailable or incompatible. |
-| `BIllPaymentsClientDependencyException` | This exception is thrown when a service error occurs while using the bill payments client. For example, if there is a problem with the server or any other service failure. |
+| `BillPaymentsClientValidationException` | This exception is thrown when a validation error occurs while using the bill payment client. For example, if required data is missing or invalid. |
+| `BillPaymentsClientDependencyException` | This exception is thrown when a dependency error occurs while using the bill payment client. For example, if a required dependency is unavailable or incompatible. |
+| `BIllPaymentsClientDependencyException` | This exception is thrown when a service error occurs while using the bill payment client. For example, if there is a problem with the server or any other service failure. |
 
 
 ## How to Contribute
