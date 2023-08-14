@@ -15,7 +15,7 @@
 		<PackageTags>Flutterwave, .NET, The Standard, FlutterWave.Core</PackageTags>
 		<GeneratePackageOnBuild>True</GeneratePackageOnBuild>
 		<PackageProjectUrl>https://github.com/SlimAhmad/FlutterWave.Core</PackageProjectUrl>
-		<PackageIcon>flutterwavelogo.jpg</PackageIcon>
+		<PackageIcon>flutterwave.jpg</PackageIcon>
 		<RepositoryUrl>https://github.com/SlimAhmad/FlutterWave.Core</RepositoryUrl>
 		<PackageReadmeFile>README.md</PackageReadmeFile>
 	</PropertyGroup>
