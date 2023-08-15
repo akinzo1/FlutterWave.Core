@@ -49,7 +49,7 @@ You must create an flutterWave account with the following link:
 Install the FlutterWave.Core library in your project.
 Use the method best suited for your development preference listed at the Nuget Link above or below.
 
-[![Nuget](https://img.shields.io/nuget/v/Standard.AI.OpenAI?logo=nuget)](https://www.nuget.org/packages/Standard.AI.OpenAI)
+[![Nuget](https://img.shields.io/nuget/v/FlutterWave.Core?logo=nuget)](https://www.nuget.org/packages/FlutterWave.Core)
 
 ### API Keys
 Once you've created a FlutterWave account. Now, go ahead and get an API key from the following link:
@@ -58,7 +58,7 @@ Once you've created a FlutterWave account. Now, go ahead and get an API key from
 ### Hello, World!
 Once you've completed the aforementioned steps, let's write our very first program with Standard.AI.OpenAI as follows:
 
-### Completions
+### Direct Charge
 The following example demonstrate how you can write your first direct card charge program.
 
 PCI Compliance is required for direct charge.
