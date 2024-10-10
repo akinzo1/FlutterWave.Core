@@ -452,12 +452,6 @@ namespace FlutterWave.Core.Services.Foundations.FlutterWave.ChargeService
                 Message = externalNGBankAccountsResponse.Message,
                 Data = new NGBankAccountsResponse.NGBankAccountsData
                 {
-                    Account = new NGBankAccountsResponse.Account
-                    {
-                        AccountName = externalNGBankAccountsResponse.Data.Account.AccountName,
-                        AccountNumber = externalNGBankAccountsResponse.Data.Account.AccountNumber,
-                        BankCode = externalNGBankAccountsResponse.Data.Account.BankCode
-                    },
                     AccountId = externalNGBankAccountsResponse.Data.AccountId,
                     Amount = externalNGBankAccountsResponse.Data.Amount,
                     TxRef = externalNGBankAccountsResponse.Data.TxRef,
